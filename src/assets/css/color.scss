@@ -1,0 +1,61 @@
+$prime: #3D4F70;
+$reddy: #FF376E;
+$bluery: #2769DB;
+$violet: #604695;
+
+// primary
+.prime {
+    background-color: $prime;
+    color: #fff;
+    svg {
+        fill: #293854;
+    }
+}
+.prime--text {
+    color: $prime;
+}
+
+// red
+.reddy {
+    background-color: $reddy;
+    color: #fff;
+    svg {
+        fill: #DF2457;
+    }
+}
+.reddy--text {
+    color: $reddy;
+}
+
+// violet
+.violet {
+    background-color: $violet;
+    color: #fff;
+    svg {
+        fill: #473174;
+    }
+}
+.violet--text {
+    color: $violet;
+}
+
+// blue
+.bluery {
+    background-color: $bluery;
+    color: #fff;
+    svg {
+        fill: #144EB2;
+    }
+}
+.bluery--text {
+    color: $bluery;
+}
+
+// static class
+.marquee {
+    background-color: #febd75;
+    color: #fff;
+}
+.second {
+    background-color: #e1ebf7;
+  }
