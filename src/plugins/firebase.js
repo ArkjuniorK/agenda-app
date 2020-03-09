@@ -4,11 +4,11 @@ import "firebase/auth";
 import "firebase/storage";
 
 const config = {
-  apiKey: "AIzaSyCB3IzZfVwDaYE_KjIYxsWzRtrsUmjmtQ4",
-  authDomain: "sekda-app.firebaseapp.com",
-  databaseURL: "https://sekda-app.firebaseio.com",
-  projectId: "sekda-app",
-  storageBucket: "sekda-app.appspot.com"
+  apiKey: "yourapikey123",
+  authDomain: "yourauthdomain.firebaseapp.com",
+  databaseURL: "https://databaseurl.firebaseio.com",
+  projectId: "your-project-id",
+  storageBucket: "your-storage.appspot.com"
 };
 
 const app = firebase.initializeApp(config);
