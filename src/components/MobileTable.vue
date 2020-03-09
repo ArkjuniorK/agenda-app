@@ -59,11 +59,6 @@ export default {
         ? "animated fadeIn faster open"
         : "animated fadeOut";
     }
-  },
-  methods: {
-    tostring(value) {
-      return value.reverse();
-    }
   }
 };
 </script>

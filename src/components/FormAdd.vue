@@ -178,7 +178,7 @@ export default {
         });
 
       this.loadingAdd = await true;
-      await db.collection("agendas").add({
+      await db.collection("collection").add({
         nama: this.namaKgtn,
         tempat: this.tempatKgtn,
         pelaksana: this.pelaksanaKgtn,

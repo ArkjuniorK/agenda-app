@@ -177,9 +177,8 @@ export default {
         });
 
       this.loadingEdit = await true;
-      console.log("Kegiatan dengan ID => ", this.idData);
       await db
-        .collection("agendas")
+        .collection("collection")
         .doc(this.idData)
         .update({
           nama: this.agenda.nama,

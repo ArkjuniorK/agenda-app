@@ -21,7 +21,7 @@ export default {
     async deleteImg() {
       await this.$emit("deleteSliderBtn");
       await db
-        .collection("pictures")
+        .collection("collection")
         .doc(this.id)
         .delete();
     }

@@ -55,7 +55,7 @@ export default {
     async deleteData() {
       let id = this.id;
       await db
-        .collection("agendas")
+        .collection("collection")
         .doc(id)
         .delete();
     },

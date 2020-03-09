@@ -782,7 +782,7 @@ export default {
       // [SOLVE] passing the whole data in the button function
       // then the data would be trigger automaticly
       await db
-        .collection("agendas")
+        .collection("collection")
         .doc(id)
         .get()
         .then(snapshot => {
@@ -809,8 +809,8 @@ export default {
       let number = parseInt(this.marqueeRepeat);
       this.loadingBtn = await true;
       await db
-        .collection("classes")
-        .doc("UnxSbUgAvMtNuAKIPgFm")
+        .collection("collection")
+        .doc("doc_id")
         .update({
           repeat: number,
           text: this.marqueeText
@@ -826,13 +826,13 @@ export default {
     },
     async changeImg() {
       let storeRef = st.ref();
-      let storePlace = storeRef.child(`hero/${this.file.name}`);
+      let storePlace = storeRef.child(`yourfolder/${this.file.name}`);
       this.replaceLoading = await true;
       await storePlace.put(this.file).then(snapshot => {
         snapshot.ref.getDownloadURL().then(downloadURL => {
           this.fileUrl = downloadURL;
-          db.collection("classes")
-            .doc("e4BDb9SS7SxXozfmUs8o")
+          db.collection("collection")
+            .doc("doc_id")
             .update({
               pic: this.fileUrl
             });
@@ -846,12 +846,12 @@ export default {
     },
     async addSlider() {
       let storeRef = st.ref();
-      let storePlace = storeRef.child(`pictures/${this.file.name}`);
+      let storePlace = storeRef.child(`yourfolder/${this.file.name}`);
       this.sliderLoading = await true;
       await storePlace.put(this.file).then(snapshot => {
         snapshot.ref.getDownloadURL().then(downloadURL => {
           let urlImg = downloadURL;
-          db.collection("pictures").add({
+          db.collection("collection").add({
             img: urlImg
           });
         });
@@ -950,8 +950,8 @@ export default {
     }
   },
   firestore: {
-    activity: db.collection("agendas").orderBy("waktu", "asc"),
-    slides: db.collection("pictures")
+    activity: db.collection("agendas_db").orderBy("waktu", "asc"),
+    slides: db.collection("pictures_db")
   },
   mounted() {
     this.primeActive;
