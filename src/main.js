@@ -5,7 +5,7 @@ import vuetify from "./plugins/vuetify";
 import vueMq from "vue-mq";
 import { firestorePlugin } from "vuefire";
 
-// firestore
+// firestore vuefire
 Vue.use(firestorePlugin);
 
 Vue.use(vueMq, {
