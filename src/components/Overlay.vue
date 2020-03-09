@@ -845,7 +845,7 @@ export default {
       this.$refs.select.click();
     },
     async addSlider() {
-      let storeRef = st.storage().ref();
+      let storeRef = st.ref();
       let storePlace = storeRef.child(`pictures/${this.file.name}`);
       this.sliderLoading = await true;
       await storePlace.put(this.file).then(snapshot => {
