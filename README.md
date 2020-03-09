@@ -42,11 +42,13 @@ const congfig = {
 If you want to use RTB instead of Firestore, make sure to replace the import statement and change the export variable.
 
 Example:
+
+From:
 ```
 import "firebase/firestore"
 export const db = app.firestore();
 ```
-to
+To
 ```
 import "firebase/database"
 export const db = app.database();
