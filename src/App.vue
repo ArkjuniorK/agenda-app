@@ -294,8 +294,8 @@ export default {
       this.container = await "active";
     },
     primeBtn() {
-      db.collection("classes")
-        .doc("BKy5pOZcKNp0HPHcNE5D")
+      db.collection("collection")
+        .doc("doc_id")
         .update({
           name: "Primary",
           text: "prime--text",
@@ -307,8 +307,8 @@ export default {
         });
     },
     reddyBtn() {
-      db.collection("classes")
-        .doc("BKy5pOZcKNp0HPHcNE5D")
+      db.collection("collection")
+        .doc("doc_id")
         .update({
           name: "Reddy",
           text: "reddy--text",
@@ -320,8 +320,8 @@ export default {
         });
     },
     violetBtn() {
-      db.collection("classes")
-        .doc("BKy5pOZcKNp0HPHcNE5D")
+      db.collection("collection")
+        .doc("doc_id")
         .update({
           name: "Violet",
           text: "violet--text",
@@ -333,8 +333,8 @@ export default {
         });
     },
     blueryBtn() {
-      db.collection("classes")
-        .doc("BKy5pOZcKNp0HPHcNE5D")
+      db.collection("collection")
+        .doc("doc_id")
         .update({
           name: "Bluery",
           text: "bluery--text",
@@ -367,11 +367,11 @@ export default {
     this.colorTheme;
   },
   firestore: {
-    agendas: db.collection("agendas").orderBy("waktu", "asc"),
-    pictures: db.collection("pictures"),
-    theme: db.collection("classes").doc("BKy5pOZcKNp0HPHcNE5D"),
-    marquee: db.collection("classes").doc("UnxSbUgAvMtNuAKIPgFm"),
-    hero: db.collection("classes").doc("e4BDb9SS7SxXozfmUs8o")
+    agendas: db.collection("agenda_db").orderBy("waktu", "asc"),
+    pictures: db.collection("pictures_db"),
+    theme: db.collection("classes_db_themecolor").doc("BKy5pOZcKNp0HPHcNE5D"),
+    marquee: db.collection("classes_db_marquee").doc("UnxSbUgAvMtNuAKIPgFm"),
+    hero: db.collection("classes_db_hero").doc("e4BDb9SS7SxXozfmUs8o")
   }
 };
 </script>
